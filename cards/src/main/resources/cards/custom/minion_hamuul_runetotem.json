@@ -8,7 +8,7 @@
   "rarity": "LEGENDARY",
   "description": "Start of Game: If your deck has only odd-Cost cards, your Basic Totems are upgraded this game.",
   "collectible": true,
-  "set": "SPELLSOURCE",
+  "set": "CUSTOM",
   "fileFormatVersion": 1,
   "gameTriggers": [
     {
