@@ -1,0 +1,14 @@
+{
+  "name": "Searing Ruled Totem",
+  "baseManaCost": 1,
+  "type": "MINION",
+  "heroClass": "SILVER",
+  "baseAttack": 2,
+  "baseHp": 2,
+  "rarity": "FREE",
+  "race": "TOTEM",
+  "description": "",
+  "collectible": false,
+  "set": "CUSTOM",
+  "fileFormatVersion": 1
+}
