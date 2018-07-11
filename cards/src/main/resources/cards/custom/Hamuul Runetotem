@@ -1,0 +1,73 @@
+{
+  "name": "Hamuul Runetotem",
+  "baseManaCost": 7,
+  "type": "MINION",
+  "heroClass": "SHAMAN",
+  "baseAttack": 4,
+  "baseHp": 8,
+  "rarity": "LEGENDARY",
+  "description": "Start of Game: If your deck has only odd-Cost cards, your Basic Totems are upgraded this game.",
+  "collectible": true,
+  "set": "SPELLSOURCE",
+  "fileFormatVersion": 1,
+  "gameTriggers": [
+    {
+      "eventTrigger": {
+        "class": "GameStartTrigger",
+        "targetPlayer": "SELF"
+      },
+      "spell": {
+        "class": "ConditionalSpell",
+        "condition": {
+          "class": "AndCondition",
+          "conditions": [
+            {
+              "class": "AllModuloValueEqualsZeroCondition",
+              "target": "FRIENDLY_HAND",
+              "filter": {
+                "class": "CardFilter",
+                "attribute": "STARTED_IN_DECK"
+              },
+              "value1": {
+                "class": "AttributeValueProvider",
+                "attribute": "BASE_MANA_COST",
+                "offset": 1
+              },
+              "value2": 2
+            },
+            {
+              "class": "AllModuloValueEqualsZeroCondition",
+              "target": "FRIENDLY_DECK",
+              "filter": {
+                "class": "CardFilter",
+                "attribute": "STARTED_IN_DECK"
+              },
+              "value1": {
+                "class": "AttributeValueProvider",
+                "attribute": "BASE_MANA_COST",
+                "offset": 1
+              },
+              "value2": 2
+            }
+          ]
+        },
+        "spell": {
+          "class": "ConditionalSpell",
+          "conditions": [
+            {
+              "class": "HasHeroPowerCondition",
+              "card": "hero_power_totemic_call"
+            }
+          ],
+          "spells": [
+            {
+              "class": "ChangeHeroPowerSpell",
+              "card": "hero_power_totemic_rule"
+            }
+          ],
+          "targetPlayer": "SELF"
+        }
+      }
+    }
+  ]
+}
