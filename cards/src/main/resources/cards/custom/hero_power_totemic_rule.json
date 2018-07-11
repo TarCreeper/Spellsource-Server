@@ -1,0 +1,67 @@
+{
+  "name": "Totemic Rule",
+  "baseManaCost": 2,
+  "type": "HERO_POWER",
+  "heroClass": "SILVER",
+  "rarity": "FREE",
+  "description": "Summon a Ruled Totem.",
+  "condition": {
+    "class": "AndCondition",
+    "conditions": [
+      {
+        "class": "AndCondition",
+        "conditions": [
+          {
+            "class": "MinionOnBoardCondition",
+            "cardFilter": {
+              "class": "SpecificCardFilter",
+              "card": "token_searing_ruled_totem"
+            }
+          },
+          {
+            "class": "MinionOnBoardCondition",
+            "cardFilter": {
+              "class": "SpecificCardFilter",
+              "card": "token_healing_ruled_totem"
+            }
+          },
+          {
+            "class": "MinionOnBoardCondition",
+            "cardFilter": {
+              "class": "SpecificCardFilter",
+              "card": "token_wrath_of_air_ruled_totem"
+            }
+          },
+          {
+            "class": "MinionOnBoardCondition",
+            "cardFilter": {
+              "class": "SpecificCardFilter",
+              "card": "token_stoneclaw_ruled_totem"
+            }
+          }
+        ],
+        "invert": true
+      },
+      {
+        "class": "MinionCountCondition",
+        "value": 7,
+        "operation": "LESS"
+      }
+    ]
+  },
+  "targetSelection": "NONE",
+  "spell": {
+    "class": "SummonSpell",
+    "cards": [
+      "token_searing_ruled_totem",
+      "token_healing_ruled_totem",
+      "token_wrath_of_air_ruled_totem",
+      "token_stoneclaw_ruled_totem"
+    ],
+    "exclusive": true,
+    "randomTarget": true
+  },
+  "collectible": true,
+  "set": "CUSTOM",
+  "fileFormatVersion": 1
+}
