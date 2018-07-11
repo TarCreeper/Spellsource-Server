@@ -1,0 +1,25 @@
+{
+  "name": "Healing Ruled Totem",
+  "baseManaCost": 1,
+  "type": "MINION",
+  "heroClass": "SILVER",
+  "baseAttack": 0,
+  "baseHp": 2,
+  "rarity": "FREE",
+  "race": "TOTEM",
+  "description": "At the end of your turn, restore 2 Health to all friendly characters.",
+  "trigger": {
+    "eventTrigger": {
+      "class": "TurnEndTrigger",
+      "targetSelection": "NONE"
+    },
+    "spell": {
+      "class": "HealSpell",
+      "target": "FRIENDLY_CHARACTERS",
+      "value": 2
+    }
+  },
+  "collectible": false,
+  "set": "CUSTOM",
+  "fileFormatVersion": 1
+}
